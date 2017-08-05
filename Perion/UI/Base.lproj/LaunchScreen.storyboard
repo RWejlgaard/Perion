@@ -21,11 +21,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoTransparrent" translatesAutoresizingMaskIntoConstraints="NO" id="x5N-ap-goX">
                                 <rect key="frame" x="50" y="211" width="314" height="314"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="512" id="JKB-fC-mNA">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="250"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="512" id="QPg-Ic-Hzi">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="250"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" secondItem="x5N-ap-goX" secondAttribute="height" multiplier="1:1" id="aPh-02-YXN"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JKB-fC-mNA"/>
+                                        <exclude reference="QPg-Ic-Hzi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JKB-fC-mNA"/>
+                                        <include reference="QPg-Ic-Hzi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="JKB-fC-mNA"/>
+                                        <include reference="QPg-Ic-Hzi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="JKB-fC-mNA"/>
+                                        <include reference="QPg-Ic-Hzi"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.37647058823529411" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.41568627450980389" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="x5N-ap-goX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="53c-sy-z3V"/>
                             <constraint firstItem="x5N-ap-goX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BSR-dz-79h"/>
@@ -33,11 +65,29 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x5N-ap-goX" secondAttribute="trailing" constant="50" id="aHN-Um-7DF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aHN-Um-7DF"/>
+                                <exclude reference="Pxh-Uh-tlr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="aHN-Um-7DF"/>
+                                <exclude reference="Pxh-Uh-tlr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="aHN-Um-7DF"/>
+                                <include reference="Pxh-Uh-tlr"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
     <resources>
