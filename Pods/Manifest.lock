@@ -1,0 +1,29 @@
+PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - JSON (5.0.0)
+  - JSONJoy (0.1.9)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - JSON
+  - JSONJoy
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  JSON: 93622160a062588b4cd3497b77ccd777f1fd0587
+  JSONJoy: 5faaa5ef59e9ac726a29bb09a7282ebbff1862c5
+
+PODFILE CHECKSUM: 4b9a057d3d3cbd340f8a8f8c6f902577e288d95a
+
+COCOAPODS: 1.1.1

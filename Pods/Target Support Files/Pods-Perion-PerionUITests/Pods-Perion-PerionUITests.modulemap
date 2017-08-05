@@ -1,0 +1,6 @@
+framework module Pods_Perion_PerionUITests {
+  umbrella header "Pods-Perion-PerionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

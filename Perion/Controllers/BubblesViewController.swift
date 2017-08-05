@@ -13,51 +13,30 @@ import GameplayKit
 import JSON
 import JSONJoy
 
-struct PTask {
-    let title : String
-    let timeCreated : String
-    let dueDate : String
-    let importance : String
-    init(_title: String, _created : String, _due : String, _importance : String) {
-        self.title = _title
-        self.timeCreated = _created
-        self.dueDate = _due
-        self.importance = _importance
-    }
-}
 
 class BubblesViewController: UIViewController {
     
     @IBOutlet weak var bubbleContainer: SKView!
     
-    private var tasks = Array<PTask>()
+    private var tasks = Array<PTypes.PTask>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let tasksCollection: Array<PTypes.PTask> = LoadTasks() else {
+            LogToUser(message: "Couldn't load tasks")
+        }
+        
         if let scene = SKScene(fileNamed: "BubblesScene") {
-            let scene = PresentBubbles(scene)
+            let scene = PresentBubbles(scene: scene, tasks: tasksCollection)
             bubbleContainer.presentScene(scene)
         }
-        do {
-             let taskArr = LoadTasks()
-            
-            for task in taskArr {
-                print(task)
-            }
-        } catch {
-            print(error)
-        }
         
-        let task = PTask(_title: "Title!", _created: "2017/29/10", _due: "2017/29/10", _importance: "5")
-        print(task)
-        
-        //let task = PTask(_title: "tit", _created: Date(), _due: Date(), _importance: 5)
-        //print(task.title)
         
     }
     
-    func LoadTasks() -> Array<PTask> {
-        var ret = Array<PTask>()
+    func LoadTasks() -> Array<PTypes.PTask> {
+        var ret = Array<PTypes.PTask>()
         
         var json: [Any]?
         do{
@@ -71,7 +50,7 @@ class BubblesViewController: UIViewController {
             let tasks = dict!["tasks"] as! [[String: String]]
             
             for task in tasks {
-                ret.append(PTask(_title: task["title"]!,
+                ret.append(PTypes.PTask(_title: task["title"]!,
                                  _created: task["time_created"]!,
                                  _due: task["due_date"]!,
                                  _importance: task["importance"]!))
@@ -84,9 +63,11 @@ class BubblesViewController: UIViewController {
         return ret
     }
     
-    func PresentBubbles(_ scene: SKScene) -> SKScene {
+    func PresentBubbles(scene: SKScene, tasks: Array<PTypes.PTask>) -> SKScene {
         let sceneWidth = scene.size.width
         let sceneHeight = scene.size.height
+        
+        
         
         let circle = SKShapeNode(circleOfRadius: 100)
         circle.position = CGPoint(x: 0, y: 0)

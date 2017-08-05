@@ -10,7 +10,7 @@
 		06F1F2525BCB335E499E131D /* Pods_Perion_PerionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67529EEC2D7CB18B594EA3F2 /* Pods_Perion_PerionUITests.framework */; };
 		35655BEEE8D375EE88A7AABE /* Pods_Perion_PerionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8644E1F9A34F28DED6D8D861 /* Pods_Perion_PerionTests.framework */; };
 		4F4425308379537B219719B1 /* Pods_Perion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660B319553862077FD194AA0 /* Pods_Perion.framework */; };
-		6DC00D921F353FE0008CDD05 /* Design.md in Sources */ = {isa = PBXBuildFile; fileRef = 6DC00D911F353FE0008CDD05 /* Design.md */; };
+		6DB997D01F36154A00C8EA04 /* PTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB997CF1F36154A00C8EA04 /* PTypes.swift */; };
 		6DEEE4DB1F336F29007AD67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEE4DA1F336F29007AD67F /* AppDelegate.swift */; };
 		6DEEE4DD1F336F29007AD67F /* BubblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEE4DC1F336F29007AD67F /* BubblesViewController.swift */; settings = {COMPILER_FLAGS = "warning disable 0169"; }; };
 		6DEEE4DF1F336F29007AD67F /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEE4DE1F336F29007AD67F /* ManagementViewController.swift */; };
@@ -50,7 +50,7 @@
 		5BBB95434D218F276D83C066 /* Pods-Perion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Perion/Pods-Perion.debug.xcconfig"; sourceTree = "<group>"; };
 		660B319553862077FD194AA0 /* Pods_Perion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67529EEC2D7CB18B594EA3F2 /* Pods_Perion_PerionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perion_PerionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DC00D911F353FE0008CDD05 /* Design.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Design.md; sourceTree = "<group>"; };
+		6DB997CF1F36154A00C8EA04 /* PTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTypes.swift; sourceTree = "<group>"; };
 		6DEEE4D71F336F29007AD67F /* Perion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Perion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEEE4DA1F336F29007AD67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DEEE4DC1F336F29007AD67F /* BubblesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +130,7 @@
 				6DEEE4DA1F336F29007AD67F /* AppDelegate.swift */,
 				6DEEE4DC1F336F29007AD67F /* BubblesViewController.swift */,
 				6DEEE4DE1F336F29007AD67F /* ManagementViewController.swift */,
+				6DB997CF1F36154A00C8EA04 /* PTypes.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,7 +141,6 @@
 				6DEEE4E01F336F29007AD67F /* Main.storyboard */,
 				6DEEE50A1F338B48007AD67F /* BubblesScene.sks */,
 				6DEEE4E51F336F29007AD67F /* LaunchScreen.storyboard */,
-				6DC00D911F353FE0008CDD05 /* Design.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -489,9 +489,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB997D01F36154A00C8EA04 /* PTypes.swift in Sources */,
 				6DEEE4DF1F336F29007AD67F /* ManagementViewController.swift in Sources */,
 				6DEEE4DB1F336F29007AD67F /* AppDelegate.swift in Sources */,
-				6DC00D921F353FE0008CDD05 /* Design.md in Sources */,
 				6DEEE4DD1F336F29007AD67F /* BubblesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
